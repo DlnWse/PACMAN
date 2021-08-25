@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 #boxMap {
     height: 880px;
     width: 760px;
     display: grid;
     grid-template-columns: repeat(19, 40px);
     grid-template-rows: repeat(22, 40px);
+    border: 3px solid white;
+    margin-top: 30px;
     
 }
 
@@ -23,4 +27,50 @@
 .fantome3{
     background: url('../IMG/fantome3.gif');
     background-color: black;
+}
+
+body{
+    background-color: #1d1d1d;
+}
+h1{
+    text-align: center;
+    color:  white;
+    font-size: 20px;
+    margin-top: -5%;
+    margin-bottom: 15%;
+    font-family: 'Quicksand', sans-serif;
+}
+.contenu{
+    display: flex;
+    flex-direction: row;
+}
+
+#textScore{
+    color: white;
+}
+#partStat{
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-top: 10%;
+    text-align: center;
+    border: white solid 3px;
+    border-radius: 20px;
+    height: 440px;
+    background-color: #1d1d1d;
+    box-shadow: 15px 15px 0px 0px #999999;
+}
+
+#TextLabel{
+    color: white;
+}
+
+#Win{
+    color: rgb(11, 122, 44);
+}
+
+#Loose{
+    color: rgb(216, 46, 46);
 }

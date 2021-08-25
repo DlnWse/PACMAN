@@ -10,7 +10,7 @@ let tableau = [
     [0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0],
     [0, 1, 1, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 1, 1, 0],
     [0, 0, 0, 0, 2, 0, 2, 0, 0, 1, 0, 0, 2, 0, 2, 0, 0, 0, 0],
-    [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    [2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2],
     [0, 0, 0, 0, 2, 0, 2, 0, 0, 1, 0, 0, 2, 0, 2, 0, 0, 0, 0],
     [0, 1, 1, 0, 2, 0, 2, 2, 2, 2, 2, 2, 2, 0, 2, 0, 1, 1, 0],
     [0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0],
@@ -26,9 +26,12 @@ let tableau = [
 
 
 
+
 let boxMap = document.getElementById('boxMap')
 let param = document.getElementById('score')
 let score = 0;
+let Win = document.getElementById('Win') ;
+let Loose = document.getElementById('Loose') ;
 let scoreLabel = document.createElement('label');
 let dots = -1;
 //===============================================//
@@ -67,7 +70,8 @@ function Show() {
     }
     //Affichage du score
     updateScore();
-    document.body.appendChild(scoreLabel);
+    document.getElementById('TextLabel').appendChild(scoreLabel);
+   
 }
 
 //=============================================//
@@ -226,7 +230,8 @@ function Collision() {
 
 
         if (TableauFantome[num].y == pacman.y && TableauFantome[num].x == pacman.x) {
-            document.body.appendChild(document.createTextNode(' Vous avez Perdu ! PacMan s\' est suicidé ! '))
+           let PerduPacman = document.body.appendChild(document.createTextNode(' Vous avez Perdu ! PacMan s\' est suicidé ! '))
+            document.getElementById('Loose').appendChild(PerduPacman);
             clearInterval(Interval)
         }
 
@@ -286,7 +291,7 @@ function Points() {
 
 function Gain() {
     if (dots == 0) {
-        document.body.appendChild(document.createTextNode('Vous avez Gagné'))
+        document.getElementById('Win').appendChild(document.createTextNode('Vous avez Gagné !'));
         clearInterval(Interval)
     }
 
