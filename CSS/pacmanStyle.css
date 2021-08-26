@@ -13,20 +13,24 @@
 
 
 .fantome0{
-    background: url('../IMG/fantome0.gif');
-    background-color: black;
+    background:  center no-repeat url('../IMG/Blinky.gif');
+    height: 40px;
+    width: 40px;
 }
 .fantome1{
-    background: url('../IMG/fantome1.gif');
-    background-color: black;
+    background: center no-repeat url('../IMG/Clyde.gif');
+    height: 40px;
+    width: 40px;
 }
 .fantome2{
-    background: url('../IMG/fantome2.gif');
-    background-color: black;
+    background: center no-repeat url('../IMG/Inky.gif');
+    height: 40px;
+    width: 40px;
 }
 .fantome3{
-    background: url('../IMG/fantome3.gif');
-    background-color: black;
+    background: center no-repeat url('../IMG/Pinky.gif');
+    height: 40px;
+    width: 40px;
 }
 
 body{

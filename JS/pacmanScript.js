@@ -39,7 +39,7 @@ let dots = -1;
 function updateScore() {
     scoreLabel.innerHTML = score;
 }
-
+--
 //Affichage de la map//
 function Show() {
     boxMap.innerHTML = '';
